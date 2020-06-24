@@ -15,13 +15,13 @@ class WindowApp(QMainWindow):
         self.get_data = self.get_name['results']
         self.result = list(map(lambda i: "{} {} {}".format(i['name']['title'], i['name']['first'], i['name']['last']), self.get_data))
 
-        counter = 0
+        count = 0
         self.layout = QVBoxLayout()
         for i in self.result:
-            counter +=1
-            self.var_check = "check_{}".format(counter)
-            self.var_check = QCheckBox(i)
-            self.layout.addWidget(self.var_check)
+            count +=1
+            self.check = "check_{}".format(count)
+            self.check = QCheckBox(i)
+            self.layout.addWidget(self.check)
 
     def setWidget(self):
         # object widget
